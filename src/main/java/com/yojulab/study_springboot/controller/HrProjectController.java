@@ -11,8 +11,32 @@ public class HrProjectController {
 
     @GetMapping("/home")
     public ModelAndView home(ModelAndView modelAndView){
-
         modelAndView.setViewName("/WEB-INF/views/hr/main.jsp");
         return modelAndView;
     }
+
+    @GetMapping("/delete")
+    public ModelAndView delete(ModelAndView modelAndView){
+        modelAndView.setViewName("/WEB-INF/views/hr/delete.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping("/insert")
+    public ModelAndView insert(ModelAndView modelAndView){
+        modelAndView.setViewName("/WEB-INF/views/hr/insert.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping("/select")
+    public ModelAndView select(ModelAndView modelAndView){
+        modelAndView.setViewName("/WEB-INF/views/hr/select.jsp");
+        return modelAndView;
+    }
+
+    @GetMapping("/dept")
+    public ModelAndView selectDept(ModelAndView modelAndView){
+        modelAndView.setViewName("/WEB-INF/views/hr/select-dept.jsp");
+        return modelAndView;
+    }
+
 }
