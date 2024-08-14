@@ -12,35 +12,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <button class="nav-link" formaction="/carInfor/map/selectSearch">Carinfo List</button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link" formaction="/files/form">file form</button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link" formaction="/charts/statistics">various Charts</button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link" formaction="/CarCompanyList">CarCompanyList</button>
-                    </li>
-                    <li class="nav-item">
                         <button class="nav-link" formaction="/hrproject/home">hrproject</button>
                     </li>
-                    <sec:authorize access="isAnonymous()">
-                    <li class="nav-item">
-                        <button class="nav-link" type="button">Needs Auths ROLE_ADMIN or ROLE_MANAGER</button>
-                    </li>
-                    </sec:authorize>                                     
-                    <sec:authorize access="hasRole('ROLE_ADMIN')">
-                    <li class="nav-item">
-                        <button class="nav-link" formaction="/admin">role Admin</button>
-                    </li>
-                    </sec:authorize>   
-                    <sec:authorize access="hasRole('ROLE_ADMIN') or hasRole('ROLE_MANAGER')">
-                        <li class="nav-item">
-                            <button class="nav-link" formaction="/manager/read">role Manager</button>
-                        </li>
-                    </sec:authorize>                                     
                 </ul>
             </div>
             <ul class="nav navbar-nav navbar-right">

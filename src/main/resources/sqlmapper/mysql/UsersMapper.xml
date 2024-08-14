@@ -10,10 +10,9 @@
     <!-- 입력 -->
         <insert id="insert" parameterType="Map">
         insert into USERS
-        (UNIQUE_ID, NAME, EMAIL, JOB, PASSWORD)
+        (USER_PK, DEPARTMENT_FK, USER_NAME, USER_PASSWORD, USER_EMAIL)
         values
-        (#{USERNAME}, #{NAME}, #{EMAIL}, #{JOB}, #{password})
-        ;
+        (#{USERNAME},#{department_pk}, #{NAME},#{password}, #{EMAIL});
         </insert>
 
 </mapper>
