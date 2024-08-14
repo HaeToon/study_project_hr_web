@@ -2,24 +2,31 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 </head>
-<body>
-<%@ include file="/WEB-INF/views/commons/header.jsp" %>
-<h1>hr home</h1>
-<table>
-    <thead>
-    <tr>
-
-    </tr>
-    </thead>
-</table>
-<hr>
-<a href="">근태 입력</a> <br>
-<a href="">근태 수정</a> <br>
-<a href="">근태 삭제</a> <br>
-<a href="">직원별 월별 근태 현황 보기</a> <br>
-<a href="">부서별 월별 근태 현황 보기</a> <br>
-<%@ include file="/WEB-INF/views/commons/footer.jsp" %>
+<<<<<<< HEAD
+<body style="height: 100vh">
+<main>
+    <div class="container-sm" style="max-width: 640px;height:100vh;display:flex;align-items: center;">
+        <ul class="list-group" style="width: 100%">
+            <li class="list-group-item">
+                <a href="/hrproject/insert">근태 생성</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/hrproject/delete">근태 삭제</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/hrproject/select">개인별 근태 조회</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/hrproject/dept">부서별 근태 조회</a>
+            </li>
+        </ul>
+    </div>
+</main>
 </body>
 </html>
