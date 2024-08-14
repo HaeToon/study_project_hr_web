@@ -7,10 +7,19 @@
 <body>
 <%@ include file="/WEB-INF/views/commons/header.jsp" %>
 <h1>hr home</h1>
+<table>
+    <thead>
+    <tr>
+
+    </tr>
+    </thead>
+</table>
 <hr>
-<a href="">insert</a>
-<a href="">delete</a>
-<a href="">select</a>
+<a href="">근태 입력</a> <br>
+<a href="">근태 수정</a> <br>
+<a href="">근태 삭제</a> <br>
+<a href="">직원별 월별 근태 현황 보기</a> <br>
+<a href="">부서별 월별 근태 현황 보기</a> <br>
 <%@ include file="/WEB-INF/views/commons/footer.jsp" %>
 </body>
 </html>

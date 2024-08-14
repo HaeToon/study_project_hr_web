@@ -21,6 +21,9 @@
                         <button class="nav-link" formaction="/charts/statistics">various Charts</button>
                     </li>
                     <li class="nav-item">
+                        <button class="nav-link" formaction="/CarCompanyList">CarCompanyList</button>
+                    </li>
+                    <li class="nav-item">
                         <button class="nav-link" formaction="/hrproject/home">hrproject</button>
                     </li>
                     <sec:authorize access="isAnonymous()">
