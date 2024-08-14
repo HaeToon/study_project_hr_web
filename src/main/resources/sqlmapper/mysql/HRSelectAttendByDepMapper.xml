@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="HRSelect">
+<select id="selectAttendByDep" parameterType="Map" resultType="Map">
+    SELECT
+        U.USER_PK AS `직원ID`,
+        U.USER_NAME AS `이름`,
+        SUM(CASE WHEN A.STATUS_FK = 1 THEN 1 ELSE 0 END) AS `출근일수`,
+        SUM(CASE WHEN A.STATUS_FK = 2 THEN 1 ELSE 0 END) AS `결근일수`,
+        SUM(CASE WHEN A.STATUS_FK = 3 THEN 1 ELSE 0 END) AS `휴가일수`
+    FROM ATTENDS A
+             JOIN USERS U ON A.USER_FK = U.USER_PK
+             JOIN DEPARTMENTS D ON U.DEPARTMENT_FK = D.DEPARTMENT_PK
+             JOIN STATUS_TABLE S ON A.STATUS_FK = S.STATUS_PK
+    WHERE D.DEPARTMENT_NAME = #{DEPARTMENT_NAME} AND A.WORKDATE LIKE CONCAT(#{WORKDATE},'%')
+    GROUP BY D.DEPARTMENT_NAME, U.USER_PK, U.USER_NAME;
+</select>
+</mapper>
