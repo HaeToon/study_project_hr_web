@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CarCompany">
+    <select id="selectAll" parameterType="Map" resultType="Map" >
+        select CP_NAME as '회사이름', CAR_NAME as '자동차이름', DATE_YEAR as '연식', COUNT(`OPTION`) as '옵션갯수'
+        from CAR_INFO_W CI
+        INNER JOIN CAR_INFO_OPTIONS_W COP ON CI.CI_PK = COP.CI_FK
+        INNER JOIN COMPANY_W CP ON CP.CP_PK = CI.CP_FK
+        INNER JOIN CAR_NAME_W CN ON CN.CN_PK = CI.CN_FK
+        INNER JOIN MODEL_YEAR_W MY ON MY.YEAR_PK = CI.YEAR_FK
+        INNER JOIN OPTIONS_W OP ON OP.OP_PK = COP.OP_FK
+        GROUP BY CP.CP_PK, CN.CN_PK, MY.YEAR_PK, CI.CI_PK;
+    </select>
+</mapper>

@@ -8,6 +8,7 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
 </head>
+<<<<<<< HEAD
 <body style="height: 100vh">
 <main>
     <div class="container-sm" style="max-width: 640px;height:100vh;display:flex;align-items: center;">

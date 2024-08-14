@@ -16,6 +16,7 @@
     <title>Insert</title>
 </head>
 <body>
+<<<<<<< HEAD
 <main style="height: 100vh;display: flex;justify-content: center;align-items: center">
     <div class="container" style="max-width: 640px">
         <h2>근태 생성</h2>
