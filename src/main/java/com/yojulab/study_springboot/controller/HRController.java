@@ -34,7 +34,7 @@ public class HRController {
     }
 
     @GetMapping("/dept")
-    public ModelAndView selectDept(ModelAndView modelAndView){
+    public ModelAndView selectDept(ModelAndView modelAndView) {
         modelAndView.setViewName("/WEB-INF/views/hr/select-dept.jsp");
         return modelAndView;
     }
