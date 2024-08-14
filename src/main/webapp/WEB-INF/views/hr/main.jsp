@@ -22,7 +22,7 @@
                 <a href="/hrproject/select">개인별 근태 조회</a>
             </li>
             <li class="list-group-item">
-                <a href="/hrproject/dept">부서별 근태 조회</a>
+                <a href="/hrproject/dept-input">부서별 근태 조회</a>
             </li>
         </ul>
     </div>
