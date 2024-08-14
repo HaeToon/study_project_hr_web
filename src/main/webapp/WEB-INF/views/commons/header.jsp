@@ -20,6 +20,9 @@
                     <li class="nav-item">
                         <button class="nav-link" formaction="/charts/statistics">various Charts</button>
                     </li>
+                    <li class="nav-item">
+                        <button class="nav-link" formaction="/hrproject/home">hrproject</button>
+                    </li>
                     <sec:authorize access="isAnonymous()">
                     <li class="nav-item">
                         <button class="nav-link" type="button">Needs Auths ROLE_ADMIN or ROLE_MANAGER</button>
