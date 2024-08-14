@@ -15,7 +15,6 @@ public class HRController {
         modelAndView.setViewName("/WEB-INF/views/hr/main.jsp");
         return modelAndView;
     }
-
     @GetMapping("/delete")
     public ModelAndView delete(ModelAndView modelAndView){
         modelAndView.setViewName("/WEB-INF/views/hr/delete.jsp");
@@ -33,11 +32,4 @@ public class HRController {
         modelAndView.setViewName("/WEB-INF/views/hr/select.jsp");
         return modelAndView;
     }
-
-    @GetMapping("/dept")
-    public ModelAndView selectDept(ModelAndView modelAndView) {
-        modelAndView.setViewName("/WEB-INF/views/hr/select-dept.jsp");
-        return modelAndView;
-    }
-
 }

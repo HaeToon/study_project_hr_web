@@ -19,18 +19,18 @@
 <main style="height: 100vh;display: flex;justify-content: center;align-items: center">
     <div class="container" style="max-width: 640px">
         <h2>근태 생성</h2>
-        <form class="pt-3 pb-3">
+        <form class="pt-3 pb-3" action="/hrproject/insert" method="post">
             <div class="mb-3">
-                <label for="userId" class="form-label">ID</label>
-                <input type="text" class="form-control" id="userId">
+                <label for="USER_FK" class="form-label">직원 ID</label>
+                <input type="text" class="form-control" id="USER_FK" name="USER_FK">
             </div>
             <div class="mb-3">
-                <label for="date" class="form-label">날짜</label>
-                <input type="date" class="form-control" id="date">
+                <label for="WORKDATE" class="form-label">근무 날짜</label>
+                <input type="date" class="form-control" id="WORKDATE" name="WORKDATE">
             </div>
             <div class="mb-3">
-                <label for="status" class="form-label">날짜</label>
-                <select class="form-select" name="status" id="status">
+                <label for="STATUS_FK" class="form-label">근무 상태</label>
+                <select class="form-select" name="STATUS_FK" id="STATUS_FK">
                     <option value="1">출근</option>
                     <option value="2">결근</option>
                     <option value="3">휴가</option>

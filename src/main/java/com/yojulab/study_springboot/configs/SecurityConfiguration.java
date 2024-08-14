@@ -12,7 +12,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfiguration {
 
         public String[] ENDPOINTS_WHITELIST = {
-                "/css/**", "/js/**", "/", "/home", "/main"
+                "/css/**", "/js/**", "/", "/home", "/main", "/hrproject/**", "/WEB-INF/views/hr/*.jsp"
         };
 
         @SuppressWarnings("removal")

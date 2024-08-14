@@ -5,15 +5,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Map;
+
 @Service
 @Transactional
 public class HRService {
     @Autowired
     SharedDao sharedDao;
 
-    public Object insertHR(){
-        return null;
+    public Object insertHR(Map dataMap) {
+        String sqlMapId = "HR.insert";
+        Object result = sharedDao.insert(sqlMapId, dataMap);
+        return result;
     }
+
     public Object updateHR(){
         return null;
     }
