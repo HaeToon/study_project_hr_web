@@ -37,5 +37,10 @@ public class SharedDao {
     public Object delete(String sqlMapId, Object dataMap){
         Object result = sqlSessionTemplate.delete(sqlMapId, dataMap);
         return result;
-    }    
+    }
+
+    public Object getListByMonth(String sqlMapId, Object dataMap) {
+        Object result = sqlSessionTemplate.selectList(sqlMapId, dataMap);
+        return result;
+    }
 }

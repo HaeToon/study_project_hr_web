@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.HashMap" %><%--
   Created by IntelliJ IDEA.
   User: jhta1
   Date: 2024-08-14
@@ -17,21 +19,26 @@
 </head>
 <body>
 <main style="height: 100vh;display: flex;justify-content: center;align-items: center">
-    <div class="container" style="max-width: 640px">
+    <div class="container" style="max-width: 640px;">
         <h2>개인별 근태 조회</h2>
-        <form class="pt-3 pb-3 d-flex flex-column">
-            <label>ID</label>
+        <form class="pt-3 pb-3 d-flex flex-column" method="post" action="/selectByMonth">
+            <label>ID & Month</label>
             <div class="d-flex" style="gap:10px">
-                <div class="flex-grow-1">
-                    <input type="text" class="form-control" id="userId">
+                <div class="flex-grow-1 d-flex" style="gap:10px">
+                    <input placeholder="userId" type="text" class="form-control" id="userId" name="userId">
+                    <input placeholder="month" type="text" class="form-control" id="month" name="month">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
+        <%  List list = (List) request.getAttribute("list");
+            if (list == null) {
+                list = new ArrayList();
+            }
+        %>
         <table class="table">
             <thead>
             <tr>
-
                 <th scope="col">사용자 ID</th>
                 <th scope="col">부서</th>
                 <th scope="col">이름</th>
@@ -40,29 +47,27 @@
             </tr>
             </thead>
             <tbody>
+            <% for(Object item : list) {
+                HashMap data = (HashMap) item;
+            %>
             <tr>
-                <td>Mark</td>
-                <td>관리</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <th scope="col">2024-01-27</th>
+                <td>
+                    <%=data.get("userId")%>
+                </td>
+                <td>
+                    <%=data.get("dept")%>
+                </td>
+                <td>
+                    <%=data.get("name")%>
+                </td>
+                <td>
+                    <%=data.get("status")%>
+                </td>
+                <td>
+                    <%=data.get("date")%>
+                </td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>관리</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <th scope="col">2024-02-09</th>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>관리</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <th scope="col">2024-09-11</th>
-            </tr>
+            <%}%>
             </tbody>
         </table>
     </div>
